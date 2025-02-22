@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Text-to-3D Model Generator</title>
+</head>
+<body>
+    <h1>Text-to-3D Model Generator</h1>
+    <form method="POST">
+        <input type="text" name="prompt" placeholder="Enter a description..." required>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if model_generated %}
+        <h3>3D Model Generated!</h3>
+        <img src="/static/depth_map.png" width="256">
+        <br>
+        <a href="/download">Download Model (.obj)</a>
+    {% endif %}
+</body>
+</html>
